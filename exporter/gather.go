@@ -121,6 +121,12 @@ func getPRs(e *Exporter, url string, data *[]Pull) {
 	json.Unmarshal(pullsResponse[0].body, &data)
 }
 
+func getActions(e *Exporter, url string, data *[]Action) {
+	i := string.Index(url, "?")
+	baseURL := url[:1]
+	actionsURL := baseURL + ""
+}
+
 // isArray simply looks for key details that determine if the JSON response is an array or not.
 func isArray(body []byte) bool {
 
